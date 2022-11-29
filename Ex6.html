@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var iter = 10;
+        var num = 2;
+        document.write('<table><thead><td>Степень</td><td>Результат</td></thead><tbody>');
+            for (i=0; i<=iter; i++) {
+                var deg = Math.pow(num, i);
+                document.write('<tr><td>' + num + '<sup>' + i + '</sup></td><td>' + deg + '</td></tr>');
+            }
+        document.write('</tbody></table>');
+    </script>
+</body>
+</html>

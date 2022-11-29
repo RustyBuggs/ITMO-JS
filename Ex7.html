@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sciences() {
+            gumanitary = new Array();
+                gumanitary1 = lessons.slice(1, 2);
+                gumanitary2 = lessons.slice(4, 6);
+            gumanitary = gumanitary1.concat(gumanitary2);
+        
+            accurate = new Array();
+               accurate1 = lessons.slice(0, 1);
+                accurate2 = lessons.slice(2, 4);
+            accurate = accurate1.concat(accurate2);
+        
+            document.write("Раздел гуманитарных наук: " + gumanitary + "<br>" + "Раздел точных наук:  " + accurate);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        lessons = new Array("Математика"," Русский язык"," Физика"," Химия"," Биология"," ОБЖ");
+        sciences();
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="passCheck">
+        Введите пароль (не более 5 символов):<br>
+        <input id="pass" type="text" name="passClient" maxlength="5"><br>
+        <input id="btn" type="submit" value="Отправить">
+    </form>
+
+    <script type="text/javascript">
+
+        // ---------- Exercise 4.1 ----------
+        // var x, y;
+        // x = parseInt(prompt('Введите значение x'));
+        // y = parseInt(prompt('Введите значение y'));
+        // if (x==y) {
+        //     alert('Введенные числа равны');
+        // }
+        // else if (x<y) {
+        //     alert('Максимальное число y');
+        // }
+        // else {
+        //     alert('Максимальное число x');
+        // }
+        
+        // ---------- Exercise 4.2 ----------
+        // Script used method prompt
+        // var passClient = window.prompt('Введите пароль', 'например 12345');
+        // var password = '12345';
+
+        // if (passClient == password) {
+        //     alert('Пароль верен');
+        // }
+        // else {
+        //     alert('Пароль не верен');
+        // }
+
+        //---------- Exercise 4.2 ----------
+        
+        var btn = document.getElementById("btn");
+        var password = "12345";
+        btn.onclick = check;
+        function check() {
+            var checkPass = document.getElementById("pass").value;
+            if (checkPass == password) {
+                alert('Пароль верен');
+            }
+            else {
+                alert('Пароль не верен');
+            }
+        }
+        
+    </script>
+</body>
+</html>

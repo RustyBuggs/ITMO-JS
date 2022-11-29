@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="delayredirect()">Проверка редиректа</button>
+    <script>
+        var timeoutID;
+        function delayredirect() {
+            timeoutID = window.setTimeout(redirect, 5000);
+        }
+        function redirect() {
+            document.location.assign("https://mozilla.org");
+        }
+    </script>
+</body>
+</html>

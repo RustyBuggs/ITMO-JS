@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/test.pdf" onclick="return confirm('Внимание! Для загрузки документа требуется программа Adobe Acrobat')">Открыть PDF файл</a><br>
+    <a href="" id="bgchange">Поменять цвет фона</a>
+    <script>
+        var bgchange = document.getElementById("bgchange");
+        bgchange.addEventListener("mouseover", (event) => {
+            document.body.style.background = "red";
+        }, false);
+        bgchange.addEventListener("mouseout", (event) => {
+            document.body.style.background = "white";
+        }, false);
+    </script>
+</body>
+</html>

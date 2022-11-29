@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doSend() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var passwordCheck = document.getElementById("passwordCheck").value;
+            var v = document.getElementById("email").value.indexOf("@", 1);
+            var message = document.getElementById("message").value;
+            if (name == "") {
+                document.getElementById("name").focus();
+            }
+            else if (password.length < 4) {
+                document.getElementById("password").focus();
+            }
+            else if (passwordCheck !== password) {
+                document.getElementById("passwordCheck").focus();
+            }
+            else if (v == -1) {
+                document.getElementById("email").focus();
+            }
+            else if (message.length < 10) {
+                document.getElementById("message").focus();
+            }
+            else {
+                document.user.submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="user">
+        Ваше имя:<sup>*</sup> <input type="text" id="name" size="10"><br><br>
+        Пароль:<sup>*</sup> <input type="password" id="password" size="10"><br><br>
+        Подтверждение пароля:<sup>*</sup> <input type="password" id="passwordCheck" size="10"><br><br>
+        Электронный адрес:<sup>*</sup> <input type="text" id="email" size="20"><br><br>
+        Сообщение: <textarea id="message"></textarea><br><br>
+        <input type="button" onclick="doSend()" value="Отправить">
+        <input type="reset" value="Очистить">
+        <p><sup>*</sup> – необходимые для заполения поля</p>
+    </form>
+</body>
+</html>

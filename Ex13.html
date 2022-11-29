@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="/pic.png" alt="" id="pic">
+    <script>
+        var pic = document.getElementById("pic");
+        pic.addEventListener("mouseover", (event) => {
+            event.target.style.scale = "3";
+        }, false);
+        pic.addEventListener("mouseout", (event) => {
+            event.target.style.scale = "1";
+        }, false);
+    </script>
+</body>
+</html>
